@@ -94,8 +94,15 @@ p, li {
     font-size: 1.4rem;
   }
 
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
   nav a {
-    align-items: center;
+    margin: 0;
   }
 
   .fotos {
