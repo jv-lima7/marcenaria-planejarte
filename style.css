@@ -116,9 +116,19 @@ p, li {
     padding: 40px;
   }
 
+  .videos {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+  }
+
   .videos iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 200px;
+    height: 100%;
   }
 
 }
