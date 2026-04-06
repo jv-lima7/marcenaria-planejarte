@@ -111,7 +111,9 @@ p, li {
   }
 
   section{
+    align-items: center;
     scroll-margin-top: 80px;
+    padding: 20px;
   }
 
   .videos iframe {
@@ -123,7 +125,7 @@ p, li {
 }
 
 .fotos img {
-  width: 100%;
+    width: 100%;
   border-radius: 8px;
   object-fit: cover;
 }
