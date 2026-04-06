@@ -111,6 +111,7 @@ p, li {
   }
 
   section{
+    align-items: center;
     scroll-margin-top: 80px;
   }
 
