@@ -102,6 +102,11 @@ p, li {
   margin-top: 20px;
 }
 
+.nota-final{
+  margin-left: -40px;
+  font-size: 1.035rem;
+}
+
 @media (max-width: 768px) {
   header {
     display: flex;
