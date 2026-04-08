@@ -9,7 +9,11 @@
 </head>
 <body>
     <header>
-        <button id="menu-hamburguer">☰</button>
+        <button id="menu-hamburguer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <img src="img/logo(2)-Photoroom.png" alt="">
         <nav>
             <a href="#sejabem-vindo">Boas Vindas!</a>
@@ -144,43 +148,30 @@
     <p>&copy; 2025 Marcenaria PlanejArte — Aracaju, SE</p>
     </footer>
     <script>
-  const btn = document.getElementById('menu-hamburguer');
-  const nav = document.querySelector('nav');
-  btn.addEventListener('click', function() {
-    if (nav.style.display === 'flex') {
-      nav.style.display = 'none';
-    } else {
-      nav.style.display = 'flex';
-      nav.style.flexDirection = 'column';
-      nav.style.position = 'fixed';
-      nav.style.top = '75px';
-      nav.style.left = '0';
-      nav.style.width = '100%';
-      nav.style.backgroundColor = '#faf2e7';
-      nav.style.padding = '20px 0';
-      nav.style.zIndex = '999';
-      nav.style.textAlign = 'center';
-      nav.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
-    }
-  });
-  document.querySelectorAll('nav a').forEach(function(link) {
-    link.addEventListener('click', function() {
-      if (window.innerWidth <= 768) {
-        nav.style.display = 'none';
-      }
-    });
-  });
-  window.addEventListener('resize', function() {
-    if (window.innerWidth > 768) {
-      nav.style.display = 'flex';
-      nav.style.flexDirection = 'row';
-      nav.style.position = 'static';
-      nav.style.boxShadow = 'none';
-      nav.style.padding = '0';
-    } else {
-      nav.style.display = 'none';
-    }
-  });
-</script>
+      const btn = document.getElementById('menu-hamburguer');
+      const nav = document.querySelector('nav');
+      const links = document.querySelectorAll('nav a');
+
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('open');
+        nav.classList.toggle('open');
+      });
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                btn.classList.remove('open');
+                nav.classList.remove('open');
+            }
+        });
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            btn.classList.remove('open');
+            nav.classList.remove('open');
+        }
+      });
+    </script>
 </body>
 </html>
